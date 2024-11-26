@@ -232,3 +232,93 @@ mv file1.txt something.txt
 
 This will take `file1.txt` in the current folder and rename it to `something.txt` and preserve
 all the content written inside `file1` .
+
+## File Permission
+
+Every file in linux has the following 3 permissions associated:
+
+1. Read
+2. Write
+3. Execute
+
+We can make a file get any combination of permissions i.e. READ WRITE, or READ EXECUTE, OR WRITE, OR EXECUTE, OR READ WRITE EXECUTE and so on.
+So a file can may be have all these 3 permissions or a subset of them.
+
+These permissions are associated on different level of ownership. Ownership is based on user level, that it includes:
+
+1. user who owns the file
+2. user group that owns the file
+3. other users who has acces to the system
+4. all the users of the system
+
+for any user of the machine we can separatly define what permissions they have, like owner of the file can read write execute and may be other can only read.
+
+## chmod
+
+chmod command helps us to change permission of a file or directory.
+There are two ways to use the chmod command:
+
+1. Symbolic way
+
+```bash
+chmod [user][operator][permission] file name
+```
+
+user: User part describes which set of users who want this chmod command to affect ? It can have one of the following values:
+
+1. **u**: Owner
+2. **g**: Group
+3. **o**: Other
+4. **a**: all users(owner group and others)
+
+operator: This operator tells if we want to add a permission or remove a permission or just set an exact permission by removing other. It can have the following values:
+
+1. **+**: It will be adding a permission
+2. **-**: It will be remove a permission
+3. **=**: It will be allocating an exact permission and removing everything else
+
+permission: The permission we want to associate.
+
+1. **r**: read
+2. **w**: write
+3. **x**: execute
+
+### Examples:
+
+if we want to add execute permission for the owner of the file
+
+```bash
+chmod u+x script.sh
+```
+
+if we want to remove write permission for the group
+
+```bash
+chmod g-w script.sh
+```
+
+# System monitoring in linux
+
+So we have a couple of commands that can help us to monitor system related things like disk usage, runing processes etc.
+
+### df : Command to understand disk space usage
+
+We can see that amount of disk space abilable and used using th `df` command. To make the response more human readable we can use the `-h` flag.
+
+```bash
+-h
+```
+
+![alt text](image-7.png)
+
+### du: Check disk usage of a particular folder
+
+`du` command can help us to check how much space a folder is taking. We can use the `-h` flag to make the output human readable.
+
+```bash
+du -h Certificate
+```
+
+![alt text](image-8.png)
+
+if we don't mention any folder then it will recursively go to each folder in our machine show the usage.
