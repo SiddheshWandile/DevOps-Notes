@@ -97,17 +97,15 @@ threshold =  80
 ```
 
 This command create a new variable threshold with value 80. Now if we want to use this variable at any place, we have to prepend a `$` before the variable name to acces it's value.
-``bash
-echo "Value of threshold is $threshold"
 
-````
 In this statement, `$threshold` helps us to access a the value of the variable threshold.
 Now to add a varivable inside a bash script we can use the same syntax.
+
 ```bash
 echo "Welcome to the program"
 threshold = 80
 echo "Value of the threshold set is $threshold"
-````
+```
 
 The variable which we create in a termial, or in script will exist only in the same terminal session, once you close your terminal or move to a new terminal window, those variable won't be accessible.
 Apart form variable created by us, there are some predesined variable as well like `$USER`, `$PATH` that are already present in every terminal session we create. These are ppredefined in linux and serve some specific purpose but if we want we can chnage their value.
