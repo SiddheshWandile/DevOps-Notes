@@ -1,8 +1,0 @@
-word mefmvlmdvkvdmk To remove a directory in a Git Bash, use the command rm -r [directory_name] where [directory_name] is the name of the directory you want to delete; the -r flag indicates that you want to recursively delete the directory and all its contents. 
-Key points:
-Always use -r:00
-When deleting a directory, always use the -r flag to ensure all files and subdirectories within it are deleted as well.
-Be careful with rm:
-This command permanently deletes files and directories, so double-check the directory name before executing the command. 
-Example:
-To delete a directory named "old_files" from your current working directory, you would run:m 
